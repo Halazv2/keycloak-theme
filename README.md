@@ -11,7 +11,6 @@ A theme can provide one or more types to customize different aspects of Keycloak
 - Email - Emails
 - Login - Login forms
 - Welcome - Welcome page
--- We will be working on the theme of authentication 
     
 ## Coding with following code:
 
