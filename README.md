@@ -98,7 +98,12 @@ themes/
 >
 > here you're going to put ``` /themes/test ``` file from the repo that you cloned
 
+## run server : 
+open the terminal in keyclock file : 
 
+       ```shell cd bin ```
+then run 
+       ```shell standalone.bat ```
 
 
 
