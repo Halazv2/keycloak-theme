@@ -13,11 +13,21 @@ A theme can provide one or more types to customize different aspects of Keycloak
 - Welcome - Welcome page
     
 ## Coding with following code:
-
-1. Put css, js, img to `resources` directory
-2. Change html struction in `login.ftl`
-3. Custom configurations in `theme.properties`
+1. create file inside themes file ```/themes/<mytheme>```
+2. Put css, js, img to `resources` directory
+3. Change html struction in `login.ftl`
+4. Custom configurations in `theme.properties`
 
 > **ATTENTION**
 >
 > When add or remove files, need restart the app
+
+## Run this project : 
+
+clone rep : ``` https://github.com/Halazv2/keycloak-theme.git ```
+
+
+
+
+
+Open the browser https://localhost:8443/auth/
