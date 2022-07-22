@@ -101,9 +101,10 @@ themes/
 ## run server : 
 open the terminal in keyclock file : 
 
-       ``` cd bin ```
+        cd bin 
 then run 
-       ``` standalone.bat ```
+
+        standalone.bat 
 
 
 
