@@ -24,7 +24,28 @@ A theme can provide one or more types to customize different aspects of Keycloak
 
 ## Run this project : 
 
-clone rep : ``` https://github.com/Halazv2/keycloak-theme.git ```
+clone this rep : ``` https://github.com/Halazv2/keycloak-theme.git ```
+### Install the software :  
+
+#### Installation prerequisites: 
+These prerequisites exist for installing the Keycloak server:
+
+    Can run on any operating system that runs Java
+
+    Java 8 JRE or Java 11 JRE
+
+    zip or gzip and tar
+
+    At least 512M of RAM
+
+    At least 1G of diskspace
+
+    A shared external database like PostgreSQL, MySQL, Oracle, etc. Keycloak requires an external shared database if you want to run in a cluster. Please see the database configuration section of this guide for more information.
+
+    Network multicast support on your machine if you want to run in a cluster. Keycloak can be clustered without multicast, but this requires a bunch of configuration changes. Please see the clustering section of this guide for more information.
+
+    On Linux, it is recommended to use /dev/urandom as a source of random data to prevent Keycloak hanging due to lack of available entropy, unless /dev/random usage is mandated by your security policy. To achieve that on Oracle JDK 8 and OpenJDK 8, set the java.security.egd system property on startup to file:/dev/urandom
+
 
 
 
