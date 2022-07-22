@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+~ JBoss, Home of Professional Open Source
+~ Copyright 2019, Red Hat, Inc., and individual contributors as indicated
+~ by the @authors tag.
+~
+~ Licensed under the Apache License, Version 2.0 (the "License");
+~ you may not use this file except in compliance with the License.
+~ You may obtain a copy of the License at
+~
+~ http://www.apache.org/licenses/LICENSE-2.0
+~
+~ Unless required by applicable law or agreed to in writing, software
+~ distributed under the License is distributed on an "AS IS" BASIS,
+~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+~ See the License for the specific language governing permissions and
+~ limitations under the License.
+-->
+<xsd:schema xmlns="http://www.w3.org/2001/XMLSchema"
+            xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            xmlns:jboss="http://www.jboss.com/xml/ns/javaee"
+            targetNamespace="http://www.jboss.com/xml/ns/javaee"
+            version="8.1"
+            elementFormDefault="qualified"
+        >
+
+   <xsd:annotation>
+      <xsd:documentation>
+         <![CDATA[
+
+	This is the XML Schema for the JBoss 8.0 application client deployment descriptor.
+	The deployment descriptor must be named "META-INF/jboss-client.xml" in
+	the application client's jar file.  All the application client deployment descriptors must indicate
+	the JBoss schema by using the Java EE namespace:
+
+	http://www.jboss.com/xml/ns/javaee
+
+	and by indicating the version of the schema by
+	using the version attribute as shown below:
+
+	    <jboss-client xmlns="http://www.jboss.com/xml/ns/javaee"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://www.jboss.com/xml/ns/javaee
+                            https://www.jboss.org/j2ee/schema/jboss-client_8_1.xsd"
+             version="8.1">
+	       ...
+            </jboss-client>
+
+	The instance documents may indicate the published version of
+	the schema using the xsi:schemaLocation attribute for the
+	Java EE namespace with the following location:
+
+	https://www.jboss.org/j2ee/schema/jboss-client_8_1.xsd
+
+	]]>
+      </xsd:documentation>
+   </xsd:annotation>
+
+   <xsd:import namespace="http://xmlns.jcp.org/xml/ns/javaee" schemaLocation="https://www.jboss.org/schema/jbossas/javaee_8.xsd"/>
+   <xsd:include schemaLocation="https://www.jboss.org/j2ee/schema/jboss-common_8_1.xsd"/>
+
+   <xsd:element name="jboss-client" type="jboss:jboss-clientType"/>
+
+   <xsd:complexType name="jboss-clientType">
+      <xsd:sequence>
+         <xsd:element name="module-name" type="xsd:string" minOccurs="0"/>
+         <xsd:group ref="jboss:descriptionGroup"/>
+         <xsd:element name="callback-handler" type="xsd:string" minOccurs="0"/>
+         <xsd:element name="metadata-complete" type="xsd:boolean" minOccurs="0"/>
+         <xsd:element name="jndi-name" type="xsd:string" minOccurs="0"/>
+         <xsd:group ref="jboss:jndiEnvironmentRefsGroup"/>
+         <xsd:element name="message-destinations" type="jboss:message-destinationType" minOccurs="0" maxOccurs="unbounded"/>
+         <xsd:element name="depends" type="xsd:string" minOccurs="0" maxOccurs="unbounded"/>
+      </xsd:sequence>
+      <xsd:attribute name="id" type="xsd:string"/>
+      <xsd:attribute name="version" type="xsd:string"/>
+   </xsd:complexType>
+
+</xsd:schema>
