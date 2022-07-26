@@ -51,7 +51,7 @@
             ${msg("password")}
           </@inputPrimary.kw>
         </div>
-        <div class="flex items-center" style="display: flex; justify-content: center; align-items: center;">
+        <div class="flex items-center" style="display: flex; justify-between: center; align-items: center; gap: 43px;">
           <#if realm.rememberMe && !usernameEditDisabled??>
             <@checkboxPrimary.kw checked=login.rememberMe?? name="rememberMe">
               ${msg("rememberMe")}
